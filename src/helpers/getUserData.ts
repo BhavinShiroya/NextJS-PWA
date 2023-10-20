@@ -71,7 +71,7 @@ export async function getUserData() {
   const data = rows.map((row: any) => ({
     ownerName: row.ownerName,
     vehicleCompany: row.vehicleCompany,
-    vehicleNo: row.vehicleNo,
+    vehicleNo: `${row.vehicleNo} - ${row.series}`,
     ownerPhoneNo: row.ownerPhoneNo,
     flatNo: row.flatNo
   }))
