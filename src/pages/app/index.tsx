@@ -71,7 +71,6 @@ export default function AppIndex() {
             <Box display="flex" justifyContent="space-between">
               <Box display="flex" flexDirection="column" alignItems="center">
                 <Typography variant="h6">{item.ownerName}</Typography>
-                <Typography variant="caption">{'ભાવિન શિરોયા'}</Typography>
               </Box>
               <Box display="flex" flexDirection="column" alignItems="center">
                 <Typography variant="h6">{item.vehicleNo}</Typography>
