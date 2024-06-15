@@ -45,7 +45,7 @@ export default function AppIndex() {
 
   return (
     <>
-      <ShellTitle title="Home" />
+      <ShellTitle title="Shivdhara Skylight" />
       <Paper>
         <Box m={2} pt={2} pb={1}>
           <TextField
