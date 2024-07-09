@@ -51,7 +51,7 @@ export default function AppIndex() {
           <TextField
             id="input-with-icon-textfield"
             label="Search"
-            placeholder="Search Car, flat, mobile, name"
+            placeholder="Search by Car, flat, mobile, name"
             onChange={(e) => setSearchTerm(e.target.value)}
             InputProps={{
               startAdornment: (
@@ -65,6 +65,9 @@ export default function AppIndex() {
           />
         </Box>
       </Paper>
+      <Box>
+        <Typography>{`Total Cars : ${filteredData.length}`}</Typography>
+      </Box>
       {filteredData.map((item: any) => (
         <Paper sx={{ mb: 1 }} key={item.vehicleNo}>
           <Box p={2}>
@@ -91,7 +94,13 @@ export default function AppIndex() {
               <a href={'tel:' + item.ownerPhoneNo}>
                 <CallIcon color="warning" />{' '}
               </a>
-              <WhatsAppIcon color="success" />
+              <a
+                href={`https://wa.me/${
+                  item.ownerPhoneNo
+                }?text=${encodeURIComponent('hi')}`}
+              >
+                <WhatsAppIcon color="success" />
+              </a>
             </Box>
           </Box>
         </Paper>

@@ -2,10 +2,8 @@ import MenuCloseIcon from '@mui/icons-material/ArrowBack'
 import MenuIcon from '@mui/icons-material/Menu'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
-import Hidden from '@mui/material/Hidden'
 import IconButton from '@mui/material/IconButton'
 import { useTheme } from '@mui/material/styles'
-import Switch from '@mui/material/Switch'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { Actions, useAppShell } from 'components/providers/AppShellProvider'
@@ -27,12 +25,13 @@ export function AppToolbar() {
     })
   }
 
-  const toggleBottomNav = () => {
-    dispatch({
-      type: Actions.SHOW_BOTTOM_NAV,
-      payload: !state.showBottomNav
-    })
-  }
+  // const toggleBottomNav = () => {
+  //   dispatch({
+  //     type: Actions.SHOW_BOTTOM_NAV,
+  //     payload: !state.showBottomNav
+  //   })
+  // }
+
   const toggleTheme = () => {
     dispatch({
       type: Actions.SET_THEME,
@@ -90,7 +89,7 @@ export function AppToolbar() {
           <Typography variant="h6" noWrap sx={{ mr: 'auto' }}>
             {state.title}
           </Typography>
-          <Hidden mdUp implementation="js">
+          {/* <Hidden mdUp implementation="js">
             <Box
               sx={{
                 display: 'flex',
@@ -111,7 +110,7 @@ export function AppToolbar() {
                 color="secondary"
               />
             </Box>
-          </Hidden>
+          </Hidden> */}
           <ThemeSwitch
             checked={state.theme === 'dark'}
             onChange={toggleTheme}

@@ -12,7 +12,6 @@ import {
 import {
   AppUpdatedNotification,
   DisplayModeNotification,
-  MobileBottomNav,
   OfflineIndicator
 } from 'components'
 import { AppToolbar } from 'components/layout'
@@ -124,9 +123,9 @@ export function AppShell({
             }}
           >
             <OfflineIndicator />
-            <Hidden mdUp implementation="js">
+            {/* <Hidden mdUp implementation="js">
               {state.showBottomNav ? <MobileBottomNav /> : null}
-            </Hidden>
+            </Hidden> */}
           </Box>
         </Box>
       </Box>

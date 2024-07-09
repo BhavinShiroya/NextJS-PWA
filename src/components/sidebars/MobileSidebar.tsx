@@ -1,5 +1,5 @@
 import { Box, List, Typography, useMediaQuery, useTheme } from '@mui/material'
-import Avatar from '@mui/material/Avatar'
+// import Avatar from '@mui/material/Avatar'
 import Card from '@mui/material/Card'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import { Actions, useAppShell } from 'components/providers/AppShellProvider'
@@ -101,7 +101,7 @@ export const MobileSidebar = memo(function MobileSidebar({
               justifyContent: 'flex-start'
             }}
           >
-            <Avatar
+            {/* <Avatar
               sx={{
                 width: 50,
                 height: 50,
@@ -110,23 +110,19 @@ export const MobileSidebar = memo(function MobileSidebar({
                 mr: 2
               }}
               src="/app/profile.jpg"
-            ></Avatar>
+            ></Avatar> */}
             <Box sx={{ mb: 1 }}>
               <Typography
                 sx={{
-                  color: '#fff'
+                  color: '#fff',
+                  ml: 1,
+                  mb: 1,
+                  mr: 2
                 }}
                 variant="h6"
                 component="p"
               >
-                Ivan Bambino
-              </Typography>
-              <Typography
-                sx={{
-                  color: '#fff'
-                }}
-              >
-                hello@example.com
+                Menu
               </Typography>
             </Box>
           </Box>
